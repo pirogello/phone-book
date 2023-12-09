@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    container_name: data-base
+    environment:
+      - POSTGRES_USER=u
+      - POSTGRES_PASSWORD=p
+      - POSTGRES_DB=phone_book
+    ports:
+      - "5431:5432"
