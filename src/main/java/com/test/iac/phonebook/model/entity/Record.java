@@ -2,6 +2,7 @@ package com.test.iac.phonebook.model.entity;
 
 import com.test.iac.phonebook.model.Status;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,6 +23,7 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
+@AllArgsConstructor
 public class Record {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

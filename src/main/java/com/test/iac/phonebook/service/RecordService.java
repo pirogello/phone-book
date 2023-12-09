@@ -16,7 +16,8 @@ public interface RecordService {
     RecordInfoResponse getById(UUID id);
     RecordInfoResponse getByPhoneNumber(String phoneNumber);
     List<RecordInfoResponse> getAllByName(String name);
-    List<RecordInfoResponse> getAllActive();
+    List<RecordInfoResponse> getAll();
     CompletableFuture<List<RecordInfoResponse>> asyncUpdateAllActive() throws InterruptedException;
+    List<RecordInfoResponse> getAllDeleted();
 
 }

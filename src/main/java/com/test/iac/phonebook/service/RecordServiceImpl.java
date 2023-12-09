@@ -87,7 +87,7 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public List<RecordInfoResponse> getAllActive() {
+    public List<RecordInfoResponse> getAll() {
         return recordRepo.findAll()
                 .stream()
                 .map(this::entityToResponse)
@@ -106,6 +106,12 @@ public class RecordServiceImpl implements RecordService {
                 .map(this::entityToResponse)
                 .toList();
         return CompletableFuture.completedFuture(response);
+    }
+
+    @Override
+    public List<RecordInfoResponse> getAllDeleted() {
+        List<Record> records = recordRepo.findAllDeleted();
+        return records.stream().map(this::entityToResponse).toList();
     }
 
 

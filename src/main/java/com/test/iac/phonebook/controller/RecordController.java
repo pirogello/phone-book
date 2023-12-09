@@ -44,7 +44,7 @@ public class RecordController {
     @GetMapping
     public List<RecordInfoResponse> getRecords(@RequestParam(required = false) String name){
         if(name == null)
-            return recordService.getAllActive();
+            return recordService.getAll();
         return recordService.getAllByName(name);
     }
 
