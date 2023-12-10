@@ -52,3 +52,5 @@ Frontend реализован на **Vue.js** по принципу одност
     docker build -t phone-book-frontend .
     docker run -it -p 8080:8080 --rm --name phone-book-frontend phone-book-frontend
     ```
+
+    ### Перейдите в браузере по адресу localhost:8080
