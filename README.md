@@ -50,5 +50,5 @@ Frontend реализован на **Vue.js** по принципу одност
     Запустите в командной строке следующие команды: 
     ```
     docker build -t phone-book-frontend .
-    docker run -it -p 8080:8080 --rm --name phone-book-frontend
+    docker run -it -p 8080:8080 --rm --name phone-book-frontend phone-book-frontend
     ```
